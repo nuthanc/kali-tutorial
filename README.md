@@ -16,4 +16,16 @@
 * Network
     * Bridged Adapter: en0: Wi-fi(Wireless)
 
-# kali-tutorial
+### Setting up Kali Linux Repository
+* Follow the instructions in https://superuser.com/questions/1410570/cant-install-anything-on-kali-linux-unable-to-locate-package
+    * Update the /etc/apt/sources.list
+    * apt-get update
+* apt-get install tor
+
+### Setting up Proxychains
+* Purpose: To hide IP address of the source traffic and evade firewalls
+* To do this:
+* nano /etc/proxychains.conf
+    * Uncomment dynamic_chain
+    * Uncomment Proxy DNS requests - no leak for DNS data
+    * Add sock5  127.0.0.1 9050 to the ProxyList
