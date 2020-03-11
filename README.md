@@ -16,3 +16,4 @@
 * Network
     * Bridged Adapter: en0: Wi-fi(Wireless)
 
+# kali-tutorial
