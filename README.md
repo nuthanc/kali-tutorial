@@ -28,10 +28,11 @@
 * nano /etc/proxychains.conf
     * Uncomment dynamic_chain
     * Uncomment Proxy DNS requests - no leak for DNS data
-    * Add sock5  127.0.0.1 9050 to the ProxyList
-* sock5 is much faster than sock4
+    * Add socks5  127.0.0.1 9050 to the ProxyList
+* socks5 is much faster than socks4
 * **Sockets** is a logical endpoint for communication
 * Start the tor service with the following command
     * service tor start
 * Using **proxychains**
     * proxychains firefox www.dnsleaktest.com
+    * This was not working until I commented out socks4
