@@ -1,6 +1,6 @@
 # Practical Ethical Hacking
 
-### From OReilly
+## From OReilly
 * Install Virtual box and then get Kali-linux iso file
 
 ### Config:
@@ -44,9 +44,36 @@
 * KeepNote and Greenshot for NoteKeeping
 
 ### Networking Refresher
-* IPv4(Decimal) and IPv6(Hexadecimal)
+* IPv4(Decimal)(inet) and IPv6(Hexadecimal)(inet6)
 * 32 bit for IPv4 and 128 bit for IPv6
 * Private IP addresses
     * 10.0.0.0 to 10.255.255.255
     * 172.16.0.0 to 172.31.255.255 (172.16/12 prefix)
     * 192.168.0.0 to 192.168.255.255 (192.168/16 prefix)
+* MAC address as ether in ifconfig
+    * First 3 pairs in MAC address lookup(OUI)
+* TCP vs UDP
+    * TCP: Connection-oriented protocol(High reliablility)
+        * HTTP/HTTPS, ssh ,ftp
+    * UDP: Connection-less protocol
+        * Streaming service, DNS, VoIP
+    * TCP 3 way handshake
+        * Send SYN packet
+        * Receive SYN+ACK packet
+        * Finally send ACK packet
+        * It's like you say hi to a neighbour, your neighbor acknowledges SYN by saying hello too, and finally you acknowledge too and that's ACK
+        * After this you can start your conversation
+        * In computer, you do this via ports, item that can be opened on a macine and they are ways to communicate for certain protocols
+            * HTTP over port 80, HTTPS over port 443
+    * Demonstrate via WireShark
+        * In Kali, type wireshark& and start capture
+    * Common ports: ![Alt text](img/common_ports.png?raw=true "Common ports")
+* OSI model
+    * Please Do Not Throw Sausage Pizza Away(PDNTSPA)Mneumonics
+    1. Physical: Data cablesm cat6
+    2. Data Link: Switching, MAC addresses
+    3. Network: IP addresses, Routing
+    4. Transport: TCP/UDP
+    5. Session: Session management
+    6. Presentation: WMV, JPEG, MOV
+    7. Application: HTTP, SMTP
