@@ -1,5 +1,6 @@
-# kali-tutorial
+# Practical Ethical Hacking
 
+### From OReilly
 * Install Virtual box and then get Kali-linux iso file
 
 ### Config:
@@ -36,3 +37,16 @@
 * Using **proxychains**
     * proxychains firefox www.dnsleaktest.com
     * This was not working until I commented out socks4
+
+## Practical Ethical Hacking contents
+
+### Introduction
+* KeepNote and Greenshot for NoteKeeping
+
+### Networking Refresher
+* IPv4(Decimal) and IPv6(Hexadecimal)
+* 32 bit for IPv4 and 128 bit for IPv6
+* Private IP addresses
+    * 10.0.0.0 to 10.255.255.255
+    * 172.16.0.0 to 172.31.255.255 (172.16/12 prefix)
+    * 192.168.0.0 to 192.168.255.255 (192.168/16 prefix)
