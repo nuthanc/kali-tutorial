@@ -1,6 +1,6 @@
 # Practical Ethical Hacking
 
-## From OReilly
+## From O'Reilly
 * Install Virtual box and then get Kali-linux iso file
 
 ### Config:
@@ -77,3 +77,53 @@
     5. Session: Session management
     6. Presentation: WMV, JPEG, MOV
     7. Application: HTTP, SMTP
+* Packet Tracer 
+    * Sign Up in netacad
+    * https://www.netacad.com/portal/learning
+    * Download link: https://www.netacad.com/portal/resources/packet-tracer
+* In Packet Tracer
+    * Choose a Generic Router-PT and Switch-PT
+    * Add end devices such as Laptop and PC
+    * Double click on Device to configure
+    ##### Go to Router config
+        ###### Set up Interface ######
+        * en 
+            en and Tab for Enable or just en
+        * sh ip interface brief (or) sh ip int bri
+        # Take one of the fast ethernets ports and assign an IP address
+        * conf t (or) configuration terminal
+            To enter configuration mode
+        * int fa(Tab) 0/0 (or) interface fastEthernet 0/0
+        * ip address 192.168.0.1 255.255.255.0
+        * do sh ip int bri to check links are UP or DOWN
+        # To bring down a port: shutdown and to bring up: no shutdown
+        * no shut
+        * exit
+        * exit
+        * wr
+            write our changes
+
+        ###### Set up DHCP ######
+        * en
+        * conf t
+        * service dhcp
+        * ip dhcp pool MAIN
+        * network 192.168.1.0 255.255.255.0
+        * default-router 192.168.0.1 255.255.255.0
+        * no network 192.168.1.0 255.255.255.0
+            Made a typo of 192.168.1.0 instead of 192.168.0.0
+        * network 192.168.0.0 255.255.255.0
+        # Set the DNS server
+        * dns-server 192.168.0.1
+        * exit
+        # Exclude an address from DHCP
+        * ip dhcp exluded-address 192.168.0.1
+        * exit
+        * wr
+        * sh run 
+            To look at our configurations
+    * Take the cable and connect the Router, Switch and End points
+    * In config of Endpoints select DHCP for both IPv4 and IPv6
+    * Go to Desktop -> Command Prompt
+    * Type ipconfig
+
