@@ -2,6 +2,7 @@
 
 ## From O'Reilly
 * Install Virtual box and then get Kali-linux iso file
+* Used Kali-linux-2019.2-amd64.iso
 
 ### Config:
 * General
@@ -126,4 +127,31 @@
     * In config of Endpoints select DHCP for both IPv4 and IPv6
     * Go to Desktop -> Command Prompt
     * Type ipconfig
+
+### Lab setup
+* Google Search Kali Linux Custom Image Downloads - Offensive Security
+* Click on Image Name to download
+* For Windows, additional download of 7zip is also required
+* Windows Virtual Machine settings in VMware Workstation 15
+    * 4GB or 2GB
+    * NAT(keep it) or Bridge
+    * I copied it
+    * root/toor or kali/kali
+
+### Linux
+* updatedb
+* locate grub
+* passwd
+* ls -la
+    * First line is -, then it is a file
+    * If it's a d, then it is a directory
+    * 3 groups, owner, group, all users
+* adduser nuthan
+* cat /etc/passwd
+* cat /etc/shadow
+* su for switch user
+* su john, su root
+
+
+
 
