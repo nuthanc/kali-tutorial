@@ -188,3 +188,13 @@
     * Go to localhost:8080 and you can see hello.txt
     * It's so easy, execute the command in the directory you want to serve
 * service apache2 stop
+* To keep the service on even after reboot, use **systemctl**
+    * systemctl enable postgresql
+#### Installing and Updating Tools
+* apt update && apt upgrade
+* apt install python-pip
+* Go to Mozilla and search Github Impacket
+* Click on SecureAuthCorp and Clone
+* All install in /opt folder, so cd into it
+* cd impact and pip install .
+* Run psexec.py to check
