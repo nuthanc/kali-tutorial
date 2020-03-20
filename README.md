@@ -138,7 +138,7 @@
     * I copied it
     * root/toor or kali/kali
 
-### Linux
+### Linux Refresher
 * updatedb
 * locate grub
 * passwd
@@ -151,7 +151,40 @@
 * cat /etc/shadow
 * su for switch user
 * su john, su root
-
-
-
-
+#### Common Network Commands
+* ifconfig
+* iwconfig
+* ping 192.168.1.1(Home Router)
+* arp -a
+    * It's gonna broadcast who has this IP address
+    * And the relevant says its MAC address
+    * ARP : way of associating IP with MAC
+* netstat -ano
+    * Active connections running on the machine
+    * We can see what's open and what's talking
+* route -n
+    * Prints the routing table
+#### Viewing, Creating and Editing Files
+* echo "hey" > hey.txt
+* echo "hello there" > hey.txt
+    * This overwrites
+* echo "Hello again" >> hey.txt
+    * This appends
+* touch newfile.txt
+* nano newfile.txt
+* gedit newfile.txt
+#### Stopping and Starting Kali services
+* apache2: Webserver
+* Copy your ip address and go to browser and paste
+    * You see unable to connect, since you are not running a webserver
+* service apache2 start
+    * Go enter your ip address again and you see some contents
+* If you want to edit
+    * Go to /var/www/html/index.html
+    * Other files in /var/www/html
+* Another simple way is
+    * echo "Hello there" > hello.txt
+    * python -m SimpleHTTPServer 8080
+    * Go to localhost:8080 and you can see hello.txt
+    * It's so easy, execute the command in the directory you want to serve
+* service apache2 stop
