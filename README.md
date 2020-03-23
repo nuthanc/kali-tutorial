@@ -198,3 +198,26 @@
 * All install in /opt folder, so cd into it
 * cd impact and pip install .
 * Run psexec.py to check
+#### Scripting with Bash
+* Commands we'll be using: grep, cut, tr
+* ping 192.168.1.1
+* Only one packet with ping 192.168.1.1 -c 1
+* ping 192.168.1.1 -c 1 > ip.txt
+##### Narrowing down results using grep and cut
+* cat ip.txt | grep "64 bytes" | cut -d " " -f 4 | tr
+* cut -d " " -f 4
+    * where -d is the delimiter, in this case it's a space
+    * -f is the field, where the 4th field is the ip address
+* tr -d ":"
+    * Stands for translate
+    * For taking out the delimiter colon
+##### Script for ipsweep
+```bash
+#!/bin/bash
+
+for ip in `seq 1 254`;do
+ping -c $1.$ip | grep "64 bytes" | cut -d " " -f 4 | tr -d ":" &
+done
+```
+* & at the end allows threading and if this wasn't used, we had to add ; to the commands
+* Call using ./ipsweep.sh 192.168.1
