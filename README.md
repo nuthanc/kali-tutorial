@@ -64,7 +64,7 @@
         * Finally send ACK packet
         * It's like you say hi to a neighbour, your neighbor acknowledges SYN by saying hello too, and finally you acknowledge too and that's ACK
         * After this you can start your conversation
-        * In computer, you do this via ports, item that can be opened on a macine and they are ways to communicate for certain protocols
+        * In computer, you do this via ports, item that can be opened on a machine and they are ways to communicate for certain protocols
             * HTTP over port 80, HTTPS over port 443
     * Demonstrate via WireShark
         * In Kali, type wireshark& and start capture
@@ -221,3 +221,25 @@ done
 ```
 * & at the end allows threading and if this wasn't used, we had to add ; to the commands
 * Call using ./ipsweep.sh 192.168.1
+* Write this out to a file using ./ipsweep.sh 192.168.1 > iplist.txt
+* we can improve the script by adding a condition
+```bash
+#!/bin/bash
+if [ "$1" == "" ]
+then
+echo "You forgot an IP address!"
+echo "Syntax: ./ipsweep.sh 192.168.1"
+
+else
+for ip in `seq 1 254`;do
+ping -c 1 $1.$ip | grep "64 bytes" | cut -d " " -f 4 | tr -d ":" &
+done
+fi
+```
+* Looping in one line
+```bash
+# Run one at a time
+for ip in $(iplist.txt); do nmap -sS -p 80 -T4 $ip ; done
+# Run multiple at a time(threading)
+for ip in $(iplist.txt); do nmap -sS -p 80 -T4 $ip & done
+```
