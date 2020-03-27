@@ -243,3 +243,35 @@ for ip in $(iplist.txt); do nmap -sS -p 80 -T4 $ip ; done
 # Run multiple at a time(threading)
 for ip in $(iplist.txt); do nmap -sS -p 80 -T4 $ip & done
 ```
+
+### Python Refresher
+* #!/bin/python3 so that if executed by ./first.py, it will use python3 to execute that
+#### Strings
+```python
+# first.py
+#!/bin/python3
+
+print("Hello world")
+
+print("""This string run 
+on multiple lines""")
+
+print("this string is" + " awesome")
+
+```
+* For running both code and commands, gedit first.py&
+#### Math
+```python
+# math.py
+#!/bin/python3
+print(50 + 50)
+print(50/50)
+print(50//6)
+```
+#### Variables & Methods
+```python
+# math.py
+#!/bin/python3
+
+quote = "Everything is empty"
+```
