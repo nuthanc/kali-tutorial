@@ -274,4 +274,76 @@ print(50//6)
 #!/bin/python3
 
 quote = "Everything is empty"
+print(quote.upper())
 ```
+#### Functions
+```python
+# math.py
+#!/bin/python3
+
+def hi():
+    print("Hi, there")
+```
+#### List and Tuples
+* Lists[] are mutable and Tuples() are immutable(they cannot be changed)
+#### Importing modules
+```python
+#!/bin/python3
+import sys
+from datetime import datetime as dt
+
+print(sys.version)
+print(dt.now())
+```
+#### Advanced Strings
+```python
+#!/bin/python3
+
+name = "Nuthan"
+print(name[0]) #N
+print(name[-1]) #n
+
+sentence = "This is a sentence."
+print(sentence[:4]) #This
+print(sentence.split()) #Default delimiter is space
+
+sentence_split = sentence.split()
+sentence_join = ' '.join(sentence_split) #Join every item in the list with ' ' which is the delimiter
+
+# Escape to quote
+sen = "He said, \"Give me your money\""
+
+too_much_space = "          hello       "
+print(too_much_space.strip()) #Strip the extra spaces
+print(letter.lower() in word.lower())
+
+movie = "A Team"
+print("My favorite movie is {}".format(movie)
+```
+#### Dictionaries
+* update method to add new key:value pair
+#### Sockets
+* Connect 2 nodes together
+* In layman, Sockets are used to connect to an open port and IP address
+* Don't use socket.py
+```python
+#gedit s.py&
+
+#!/bin/python3
+
+import socket
+
+HOST = '127.0.0.1'
+PORT = 7777 #Can give whatever
+
+s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+# AF_INET: IPv4, SOCK_STREAM: Port
+s.connect((HOST, PORT))
+
+```
+* Save it and use ncat
+    * nc -nvlp 7777
+    * Listen on port 7777
+    * Waiting for anybody to connect to us
+* python3 s.py 
+* We see that connection established and closed
