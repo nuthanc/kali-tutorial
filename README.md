@@ -374,7 +374,8 @@ try:
     for port in range(50,85): #Not doing 1 to 65,535
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         socket.setdefaulttimeout(1)
-        result = s.connect_ex(target,port) #returns an error indicator
+        result = s.connect_ex((target,port)) #returns an error indicator
+        #print("Checking port {}".format(port))
         if result == 0:
             print("Port {} is open".format(port))
         s.close() 
@@ -390,4 +391,7 @@ except socket.error:
     print("Couldn't connect to server")
     sys.exit()
 
+#python3 scanner.py 192.168.1.1
+#Here 192.168.1.1 is my Router
+#Because port 53 will be open for DNS and 80 for accessing the web interface on the Router
 ```
