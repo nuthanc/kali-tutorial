@@ -395,3 +395,15 @@ except socket.error:
 #Here 192.168.1.1 is my Router
 #Because port 53 will be open for DNS and 80 for accessing the web interface on the Router
 ```
+
+### The Five Stages of Ethical Hacking
+1. Reconnaissance(Information Gathering)
+    * Active
+    * Passive
+2. Scanning and Enumeration
+    * nmap
+    * nessus
+    * nikto
+3. Gaining access(Exploitation)
+4. Maintaining access
+5. Covering tracks
