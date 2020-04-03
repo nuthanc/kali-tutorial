@@ -407,3 +407,13 @@ except socket.error:
 3. Gaining access(Exploitation)
 4. Maintaining access
 5. Covering tracks
+
+### Passive Recon
+* Physical/Social: ![Alt text](img/passive_recon.png?raw=true "Physical/Social")
+* Web/Host: ![Alt text](img/web.png?raw=true "Web/Host")
+
+### Identifying our Target
+* bugcrowd.com -> Programs
+* Search for Tesla(for this course)
+* Read the Program Details(especially the Targets) and remain out of Out of Scope
+
