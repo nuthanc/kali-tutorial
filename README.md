@@ -424,4 +424,9 @@ except socket.error:
 * Only 20 searches a month under Free plan
 * Why is it useful?
     * It gives us a list of people in the organization
-    
+
+### Gathering Breached Credentials with Breach-Parse
+* github.com/hmaverickadams
+* Tool: breach-parse
+* Passwords coming from Credential dump, Darkweb
+* Gathering username and passwords, password spraying
