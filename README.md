@@ -440,3 +440,7 @@ except socket.error:
     * https://www.dehashed.com/
 * Look for User and Patterns
 * For example, 123 on multiple, then 123! or some other pattern 
+
+### Utilizing the Harvester
+* Applications -> Information Gathering in Kali Linux
+* theharvester -d tesla.com -l 500 -b google
