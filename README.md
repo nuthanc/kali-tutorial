@@ -417,3 +417,11 @@ except socket.error:
 * Search for Tesla(for this course)
 * Read the Program Details(especially the Targets) and remain out of Out of Scope
 
+### Email address gathering with Hunter.io
+* First item: Users, email format and breach credentials
+* Tool: hunter.io
+* hunter.io is for domain search, for ex. search for testla.com
+* Only 20 searches a month under Free plan
+* Why is it useful?
+    * It gives us a list of people in the organization
+    
