@@ -430,3 +430,13 @@ except socket.error:
 * Tool: breach-parse
 * Passwords coming from Credential dump, Darkweb
 * Gathering username and passwords, password spraying
+
+### Gathering Breached Credentials with WeLeakInfo
+* weleakinfo.com
+* **Seized by FBI**
+* Alternatives:
+    * https://www.saashub.com/we-leak-info-alternatives
+    * https://snusbase.com/
+    * https://www.dehashed.com/
+* Look for User and Patterns
+* For example, 123 on multiple, then 123! or some other pattern 
