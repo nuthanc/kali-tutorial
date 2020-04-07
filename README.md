@@ -444,3 +444,23 @@ except socket.error:
 ### Utilizing the Harvester
 * Applications -> Information Gathering in Kali Linux
 * theharvester -d tesla.com -l 500 -b google
+
+### Information Gathering with Burp Suite
+* Temporary Project -> Start Burp
+* Open Firefox -> Preferences -> Network Proxy Settings -> Manual Proxy Configuration
+    * HTTP proxy: 127.0.0.1 Port 8080
+    * Use this proxy server for all protocols
+    * OK
+    * Leave Preferences Open
+    * New tab: https://burp
+    * Add to exception
+    * Click on CA certificate -> Save file
+    * Back to Preferences -> Privacy and Security -> Certificates -> View Certificates
+    * Import the Downloaded certificate and check both the boxes and OK
+    * Go to a website like tesla.com and we stall out
+    * We see that Proxy tab of Burp is lit up in orange
+* In the Burp Suite,
+    * Keep forwarding
+    * Change change the requests from GET to POST and then forward
+    * Now turn Intercept off to see what is going on
+    * In Target tab, we can see all the pages loaded and see the Request and Response
