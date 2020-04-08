@@ -475,3 +475,14 @@ except socket.error:
     * https://github.com/OWASP/Amass
 * tomnomnom httprobe to check whether websites are alive or not
 
+### Identifying Website Technologies
+* Google Search builtwith
+    * https://builtwith.com/
+* Search for tesla.com in there
+* Add Wappalyzer firefox 
+* whatweb in kali
+
+### Google Fu
+* Google Search for Google Search Syntax
+    * https://ahrefs.com/blog/google-advanced-search-operators/
+* site:tesla.com
