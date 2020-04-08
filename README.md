@@ -486,3 +486,11 @@ except socket.error:
 * Google Search for Google Search Syntax
     * https://ahrefs.com/blog/google-advanced-search-operators/
 * site:tesla.com
+* Don't want www and ir
+    * site:tesla.com -www
+    * site:tesla.com -www -ir
+* File type
+    * site:tesla.com filetype:docx
+    * site:tesla.com filetype:pdf
+    * site:tesla.com filetype:csv
+    * site:tesla.com filetype:xlsx
