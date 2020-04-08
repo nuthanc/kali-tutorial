@@ -494,3 +494,7 @@ except socket.error:
     * site:tesla.com filetype:pdf
     * site:tesla.com filetype:csv
     * site:tesla.com filetype:xlsx
+
+### Utilizing Social Media
+* LinkedIn -> Tesla -> Images -> First name, last name for email
+* Badge photos, Desk photos, Twitter
