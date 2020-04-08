@@ -464,3 +464,14 @@ except socket.error:
     * Change change the requests from GET to POST and then forward
     * Now turn Intercept off to see what is going on
     * In Target tab, we can see all the pages loaded and see the Request and Response
+
+### Hunting Subdomains
+* apt install sublist3r
+* sublist3r -d tesla.com
+* sublist3r with threads with, sublist3r -d tesla.com -t 100
+* Also a website called crt.sh
+    * Search for %.tesla.com (% = wildcard)
+* Google Search owasp amass
+    * https://github.com/OWASP/Amass
+* tomnomnom httprobe to check whether websites are alive or not
+
