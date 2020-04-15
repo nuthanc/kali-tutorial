@@ -539,6 +539,8 @@ For MAC, the below link alone is sufficient
     * To know more about nmap
     * TCP SYN a.k.a Stealth scan
     * -sS and -sU used 99% of the time
-* nmap -sU -T4 -p- -A 192.168.1.5
+* nmap -sU -T4 -p 192.168.1.5
+    * Replacing -p- with -p and removing -A
+    * Because UDP takes forever to scan, since it's a connectionless protocol it does not have a instant response time
 
 
