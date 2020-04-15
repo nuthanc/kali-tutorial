@@ -528,12 +528,17 @@ For MAC, the below link alone is sufficient
     * ACK: Connect to it
 * nmap: Scan for open port and services, process by stealth scanning(-sS)
 * In stealth scan, we are doing SYN SYNACK RST(Reset instead of ACK)
-* nmap -T4 -p- -A
+* nmap -T4 -p- -A 192.168.1.5
     * T4: Choice in speed: 1 to 5, 1 really slow and 5 really fast
     * -p-: Scan all ports, this can be left entirely where it scans top 1000 ports
         * Top 1000 ports are like the most common ports, for instance port 80, 443, 139, 445
-        * There are 65535 ports altogether
+        * There are 65535 ports altogether for TCP and 65535 for UDP
         * Scan specific ports, -p 443 or -p 80,443,53
     * -A for every information like version,os,etc
-    
+* nmap --help 
+    * To know more about nmap
+    * TCP SYN a.k.a Stealth scan
+    * -sS and -sU used 99% of the time
+* nmap -sU -T4 -p- -A 192.168.1.5
+
 
