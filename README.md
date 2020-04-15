@@ -539,8 +539,16 @@ For MAC, the below link alone is sufficient
     * To know more about nmap
     * TCP SYN a.k.a Stealth scan
     * -sS and -sU used 99% of the time
-* nmap -sU -T4 -p 192.168.1.5
+    * -sV: Probe open ports service/version info
+    * -sC: equivalent to --script=default(Script scan)
+* nmap -sU -T4 -p 192.168.1.5 (Still some error, need to check)
     * Replacing -p- with -p and removing -A
     * Because UDP takes forever to scan, since it's a connectionless protocol it does not have a instant response time
+* Faster to do the below
+    * nmap -T4 -p- 192.168.1.5
+    * Then with the open ports
+    * nmap -T4 -p 22,4444,8081 -A 192.168.1.5
+* While scanning, utilize the time to get juicy info on Google, Social media etc
+
 
 
