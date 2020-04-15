@@ -498,3 +498,42 @@ except socket.error:
 ### Utilizing Social Media
 * LinkedIn -> Tesla -> Images -> First name, last name for email
 * Badge photos, Desk photos, Twitter
+
+### Installing Kioptrix Level 1
+* Google Search Kioptrix Level 1
+* From VulnHub, download it
+* Also can checkout later "Vulnhub oscp boxes"
+For MAC, the below link alone is sufficient
+    * https://medium.com/@obikag/how-to-get-kioptrix-working-on-virtualbox-an-oscp-story-c824baf83da1
+* VM settings
+    * NAT setting
+    * 256 or 128 MB
+* Open the virtual machine configuration file of Kioptrix
+    * Search for bridged and change it to nat for ethernet0.networkName
+
+### Scanning with nmap
+* Start kioptrix VM
+* In kali, ifconfig and copy the first 3 octets
+* netdiscover -r <1st 3 octets>.0/24
+    * Using ARP to discover all the machines
+    * Can ignore .1,2,254
+* In my kali case,
+    * ifconfig returns 192.168.1.6
+    * netdiscover -r 192.168.1.0/24
+        * Get 192.168.1.5 the machine which looks similar to ours
+* Ctrl + l to clear the screen
+* TCP 3 way handshake
+    * SYN: Reach out to port and say "Hey port, are you open?"
+    * SYNACK: Yeah, I am open, let's make the connection
+    * ACK: Connect to it
+* nmap: Scan for open port and services, process by stealth scanning(-sS)
+* In stealth scan, we are doing SYN SYNACK RST(Reset instead of ACK)
+* nmap -T4 -p- -A
+    * T4: Choice in speed: 1 to 5, 1 really slow and 5 really fast
+    * -p-: Scan all ports, this can be left entirely where it scans top 1000 ports
+        * Top 1000 ports are like the most common ports, for instance port 80, 443, 139, 445
+        * There are 65535 ports altogether
+        * Scan specific ports, -p 443 or -p 80,443,53
+    * -A for every information like version,os,etc
+    
+
