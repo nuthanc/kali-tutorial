@@ -550,5 +550,33 @@ For MAC, the below link alone is sufficient
     * nmap -T4 -p 22,4444,8081 -A 192.168.1.5
 * While scanning, utilize the time to get juicy info on Google, Social media etc
 
-
+### Enumeration HTTP/HTTPS
+* Commonly found with nmap are 80,443,139(Samba),445
+* Light up with port 443, 80 and 139
+* Firefox -> Preferences -> Network Proxy -> Use system proxy settings
+* Navigate to the scanned ip in Firefox(It doesn't work in my case as Apache is not found)
+* Take notes
+    * 80/443 - 192.168.1.5 - 7:49
+    * Default webpage - Apache - PHP
+    * Not Found on clicking link: Important info: Apache version and at hostname
+    * Information disclosure - 404 page - Screenshot
+* nikto tool: Web vulnerability scanner
+* nikto --help
+* nikto -h http://192.168.1.5
+    * -h for host
+    * DoS is out of scope when we are doing penetration test
+    * Interested in Overflow
+    * Directory busting like /manual, /icons, /icons/README
+    * Save your notes
+* dirbuster and gobuster
+* dirbuster&
+    * Against targetURL in UI
+    * http://192.168.1.5:80/
+    * Select Go Faster
+    * List based brute force
+    * Browse and go to /usr/share/wordlists/dirbuster and select Small list
+    * The above is well known directories
+    * We need to know what's running in the backend to make good use of it
+* While it's going, can utilize Burpsuite also with the Firefox proxy setting and Right click -> Send to Repeater
+* Also in Browser, view source code and check for comments and passwords
 
