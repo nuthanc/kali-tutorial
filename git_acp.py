@@ -2,7 +2,7 @@ import os
 from git import Repo
 
 PATH_OF_GIT_REPO = os.getcwd() + "/.git"
-commit_message = 'Remove enumerating SMB hahaha'
+commit_message = 'Enumerating SMB'
 
 def git_push():
     try:
