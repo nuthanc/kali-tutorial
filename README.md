@@ -579,3 +579,18 @@ For MAC, the below link alone is sufficient
     * We need to know what's running in the backend to make good use of it
 * While it's going, can utilize Burpsuite also with the Firefox proxy setting and Right click -> Send to Repeater
 * Also in Browser, view source code and check for comments and passwords
+
+### Enumerating SMB
+* SMB is a file share
+* Port 139 of nmap scan: Samba smbd (workgroup: MYGROUP)
+* Go to terminal
+```sh
+msfconsole
+#Metasploit: It's an exploitation Framework
+search smb
+use \<search_no\> or the \<module\>
+#Search_no is not working, so give the module
+info
+```
+
+/usr/local/anaconda3/bin/python
