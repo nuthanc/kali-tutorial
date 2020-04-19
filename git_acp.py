@@ -10,13 +10,10 @@ def git_push():
         repo.git.add(update=True)
         repo.index.commit(commit_message)
         origin = repo.remote(name='origin')
-        origin.push()
+        # origin.push()
     except Exception as e:
         print(e)
 
 git_push()
-
-# git_add_all = os.system("git add --all")
-# git_commit = os.system(f"git commit -m 'Update {commit_message}'")
-# git_push = os.system("git push origin master")
-# print(f"`git push origin master` ran with {git_push} exit status")
+hcommit = repo.head.commit
+hcommit.diff()
