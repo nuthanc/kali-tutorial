@@ -579,4 +579,3 @@ For MAC, the below link alone is sufficient
     * We need to know what's running in the backend to make good use of it
 * While it's going, can utilize Burpsuite also with the Firefox proxy setting and Right click -> Send to Repeater
 * Also in Browser, view source code and check for comments and passwords
-
