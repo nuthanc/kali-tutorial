@@ -4,6 +4,11 @@
 * Install Virtual box and then get Kali-linux iso file
 * Used Kali-linux-2019.2-amd64.iso
 
+### Add crontab config
+```
+* * * * * cd /Users/nuthanc/personal_projects/kali-tutorial && /usr/local/anaconda3/bin/python git_acp.py >error
+```
+
 ### Config:
 * General
     * Name: Kali Linux, Type: Linux, Version: Linux 2.6/3.x/4.x (64-bit)
