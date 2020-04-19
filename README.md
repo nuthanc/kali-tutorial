@@ -580,3 +580,4 @@ For MAC, the below link alone is sufficient
 * While it's going, can utilize Burpsuite also with the Firefox proxy setting and Right click -> Send to Repeater
 * Also in Browser, view source code and check for comments and passwords
 
+Let's check again
