@@ -8,6 +8,7 @@
 ```
 * * * * * cd /Users/nuthanc/personal_projects/kali-tutorial && /usr/local/anaconda3/bin/python git_acp.py >error
 ```
+* Removed and added ssh-keygen
 
 ### Config:
 * General

@@ -2,7 +2,7 @@ import os
 from git import Repo
 
 PATH_OF_GIT_REPO = os.getcwd() + "/.git"
-commit_message = 'Update files'
+commit_message = 'Update README'
 repo = Repo(PATH_OF_GIT_REPO)
 
 def git_push():
