@@ -589,7 +589,7 @@ For MAC, the below link alone is sufficient
 ### Enumerating SMB
 * SMB is a file share
 * Port 139 of nmap scan: Samba smbd (workgroup: MYGROUP)
-* Go to terminal
+* Go to terminal for msfconsole
 ```sh
 msfconsole
 #Metasploit: It's an exploitation Framework
@@ -597,6 +597,17 @@ search smb
 use \<search_no\> or the \<module\>
 #Search_no is not working, so give the module
 info
+options
+set RHOSTS 192.168.1.5
+run
 ```
+* smbclient
+```sh
+# -L to list out files
+smbclient -L \\\\192.168.1.5\\
+# When ShareName obtained is IPC$ and ADMIN$
+smbclient -L \\\\192.168.1.5\\ADMIN$
+#or
+smbclient -L \\\\192.168.1.5\\IPC$
 
-### Add for checking git diff again
+```
