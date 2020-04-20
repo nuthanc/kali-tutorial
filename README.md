@@ -619,6 +619,22 @@ ssh 192.168.1.5 -oKexAlgorithms=+diffie-hellman-group1-sha1
 # Error with this also, as there is no Cipher found
 # Copy the offer from the error message and add to -c
 ssh 192.168.1.5 -oKexAlgorithms=+diffie-hellman-group1-sha1 -c <1st offer>
+```
 
-
+### Researching Potential Vulnerabilities
+* In Google
+    * mod_ssl 2.8.4 exploit
+        * https://www.exploit-db.com/exploits/764
+        * https://github.com/heltonWernik/OpenLuck
+    * Apache httpd 1.3.20 exploit
+    * SAMBA 2.2.1a exploit
+        * Love rapid7 because of rapid7
+        * https://www.rapid7.com/db/modules/exploit/linux/samba/trans2open
+        * https://www.exploit-db.com/exploits/10
+* When no data is Available and needs to be done on Terminal
+```sh
+searchsploit Samba 2.2.1a
+# No result for above
+searchsploit Samba 2
+searchsploit mod ssl
 ```
