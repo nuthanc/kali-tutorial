@@ -611,3 +611,14 @@ smbclient -L \\\\192.168.1.5\\ADMIN$
 smbclient -L \\\\192.168.1.5\\IPC$
 
 ```
+
+### Enumerating SSH
+* While ssh, if no matching key found, use the below
+```sh
+ssh 192.168.1.5 -oKexAlgorithms=+diffie-hellman-group1-sha1
+# Error with this also, as there is no Cipher found
+# Copy the offer from the error message and add to -c
+ssh 192.168.1.5 -oKexAlgorithms=+diffie-hellman-group1-sha1 -c <1st offer>
+
+
+```
