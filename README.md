@@ -649,3 +649,16 @@ masscan -p1-65535 192.168.1.5
 masscan -p1-65535 --rate 1000 192.168.1.5
 nmap -T4 -p- 192.168.1.5
 ```
+
+### Scanning with Metasploit
+```bash
+msfconsole
+search portscan
+#Copy syn scan or the id(For ex: 4)
+use 4
+options
+set rhosts 192.168.1.5
+set ports 1-65535
+run
+# It's actually slow
+```
