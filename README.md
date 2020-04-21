@@ -662,3 +662,17 @@ set ports 1-65535
 run
 # It's actually slow
 ```
+
+### Scanning with Nessus
+* Google Nessus download
+    * Downloads Nessus Tenable
+    * 64 bit debian
+* In terminal,
+    * cd Downloads
+    * dpkg -i Nessus(complete folder)
+    * Start by this command
+    * /etc/init.d/nessusd start
+* Navigate to https://kali:8834
+* In firefox
+    * Nessus Essentials
+    * 7697-1630-CDC8-F810-5C35
