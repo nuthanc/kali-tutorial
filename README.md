@@ -638,3 +638,14 @@ searchsploit Samba 2.2.1a
 searchsploit Samba 2
 searchsploit mod ssl
 ```
+
+## Additional Scanning Tools
+### Scanning with Masscan
+* https://github.com/robertdavidgraham/masscan
+```bash
+# The below is slow
+masscan -p1-65535 192.168.1.5
+# Increase with rate option
+masscan -p1-65535 --rate 1000 192.168.1.5
+nmap -T4 -p- 192.168.1.5
+```
