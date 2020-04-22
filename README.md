@@ -675,4 +675,17 @@ run
 * Navigate to https://kali:8834
 * In firefox
     * Nessus Essentials
-    * 7697-1630-CDC8-F810-5C35
+    * Complete all the necessary steps
+* When install is complete
+    * New Scan
+    * Basic Network Scan
+        * Name: Kioptrix
+        * Description: Kioptrix
+        * Targets: 192.168.1.5
+        * Rest some defaults or according to your needs
+        * Save it and Launch
+    * Advanced Scan
+* When the Scan is complete
+    * Go to the Scan results
+    * Disable Groups to view properly
+    
