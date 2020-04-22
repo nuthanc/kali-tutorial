@@ -695,3 +695,17 @@ run
     * -e /bin/bash: Offer bin bash of victim to attackbot
 * Bind Shell: Exploit opens up a port on the Target and we connect to it
 * ![Alt text](img/bind_shell.png?raw=true "Bind Shell")
+
+### Staged vs Non-Staged Payloads
+* Payload: What we are gonna run as an exploit
+* Two types:
+    * Non-staged
+    * Staged
+* Non-staged:
+    * Sends exploit code all at once
+    * Larger in size and doesn't always work
+    * Example: windows/meterpreter_reverse_tcp
+* Staged:
+    * Sends exploit code in stages
+    * Can be less stable
+    * Example: windows/meterpreter/reverse_tcp
