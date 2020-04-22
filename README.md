@@ -688,4 +688,10 @@ run
 * When the Scan is complete
     * Go to the Scan results
     * Disable Groups to view properly
-    
+
+### Reverse Shells vs Bind Shells
+* ![Alt text](img/reverse_shell.png?raw=true "Reverse Shell")
+* Reverse Shell: Attackbot Listening on port by opening up that port
+    * -e /bin/bash: Offer bin bash of victim to attackbot
+* Bind Shell: Exploit opens up a port on the Target and we connect to it
+* ![Alt text](img/bind_shell.png?raw=true "Bind Shell")
